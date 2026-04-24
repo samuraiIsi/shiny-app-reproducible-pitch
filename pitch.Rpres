@@ -1,9 +1,7 @@
----
-title: "MTCARS MPG Explorer"
-author: "Isi"
-date: "`r Sys.Date()`"
-output: slidy_presentation
----
+MTCARS MPG Explorer
+========================================================
+author: Isi
+date: `r Sys.Date()`
 
 ## Problem and Solution
 
@@ -38,7 +36,7 @@ The deployed Shiny app is available here:
 
 <https://img-mgt.shinyapps.io/mtcars-mpg-explorer/>
 
-```{r echo=FALSE}
+```{r, echo=FALSE}
 summary(mtcars[, c("mpg", "hp", "wt", "gear")])
 ```
 
@@ -46,7 +44,7 @@ summary(mtcars[, c("mpg", "hp", "wt", "gear")])
 
 One of the clearest patterns in `mtcars` is that heavier cars tend to have lower fuel economy.
 
-```{r echo=FALSE}
+```{r, echo=FALSE}
 plot(
   mtcars$wt,
   mtcars$mpg,
