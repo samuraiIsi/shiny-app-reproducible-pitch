@@ -8,7 +8,7 @@ https://img-mgt.shinyapps.io/mtcars-mpg-explorer/
 
 ## RPubs presentation
 
-https://rpubs.com/Isi/mtcars-mpg-explorer-presentation
+https://rpubs.com/Isi/mtcars-mpg-explorer
 
 ## Project contents
 
