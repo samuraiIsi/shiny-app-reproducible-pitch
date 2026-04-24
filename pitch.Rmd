@@ -1,0 +1,74 @@
+---
+title: "MTCARS MPG Explorer"
+author: "Isi"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+## Product Pitch
+
+`MTCARS MPG Explorer` is a small interactive Shiny app built for the Coursera course `Developing Data Products`.
+
+Its goal is to turn the classic `mtcars` dataset into a quick exploration tool for fuel efficiency.
+
+The app lets users:
+
+- filtering cars by horsepower
+- comparing automatic and manual transmission groups
+- focusing on selected gear counts
+- visualizing the relationship between car weight and fuel economy
+
+## Why It Matters
+
+Fuel economy is not driven by one variable alone.
+
+Instead of reading a static table, users can interactively explore how vehicle weight, horsepower, gears, and transmission type influence miles per gallon.
+
+This makes the app useful for:
+
+- learning exploratory data analysis with a familiar dataset
+- understanding simple relationships in automotive performance data
+- seeing how filters change both plots and summary statistics in real time
+
+## Built For Reproducibility
+
+The app uses the built-in `mtcars` dataset, so it is fully reproducible without external downloads.
+
+The deployed Shiny app is available here:
+
+<https://img-mgt.shinyapps.io/mtcars-mpg-explorer/>
+
+```{r}
+summary(mtcars[, c("mpg", "hp", "wt", "gear")])
+```
+
+## Relationship In The Data
+
+One of the clearest patterns in `mtcars` is that heavier cars tend to have lower fuel economy.
+
+```{r echo=FALSE}
+plot(
+  mtcars$wt,
+  mtcars$mpg,
+  pch = 19,
+  col = "#2C7FB8",
+  xlab = "Weight (1000 lbs)",
+  ylab = "Miles per gallon",
+  main = "Weight and fuel economy in mtcars"
+)
+abline(lm(mpg ~ wt, data = mtcars), col = "#D95F0E", lwd = 2)
+```
+
+The regression line highlights the negative association between weight and MPG.
+
+## Main Features
+
+The Shiny app includes:
+
+- a horsepower range slider
+- transmission filters
+- gear filters
+- a plotted regression line
+- a filtered table and summary statistics
+
+Together, these features make the application a compact but effective interactive data product.
