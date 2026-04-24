@@ -5,6 +5,6 @@ account: img-mgt
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 17220282
-bundleId: 11900262
+bundleId: 11902139
 url: https://img-mgt.shinyapps.io/mtcars-mpg-explorer/
 version: 1

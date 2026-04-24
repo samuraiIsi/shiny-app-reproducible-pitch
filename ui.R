@@ -4,7 +4,17 @@ shinyUI(fluidPage(
   titlePanel("MTCARS MPG Explorer"),
   sidebarLayout(
     sidebarPanel(
-      helpText("Explore how vehicle weight and horsepower relate to fuel economy."),
+      h4("How to use this app"),
+      helpText("Use the controls below to filter the cars shown in the plot and table."),
+      tags$ol(
+        tags$li("Choose a horsepower range with the slider."),
+        tags$li("Select one or both transmission types."),
+        tags$li("Pick the gear counts you want to include."),
+        tags$li("Read the plot, table, and summary to compare fuel economy.")
+      ),
+      helpText("Tip: if your filters are too narrow, the plot may ask you to include more cars."),
+      hr(),
+      h4("Filters"),
       sliderInput(
         "hp",
         "Horsepower range",
